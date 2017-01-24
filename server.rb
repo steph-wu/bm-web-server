@@ -16,7 +16,6 @@ loop do                                             # Server runs forever
   puts lines                                        # Output the full request to stdout
 
   filename = lines[0].gsub(/GET \//, '').gsub(/\ HTTP.*/, '')
-  filename = 'index.html'
 
   if File.exists?(filename)
     response_body = File.read(filename)
